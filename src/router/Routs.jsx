@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
-import LoginView from '../pages/auth/login'
+import LoginView from '../pages/auth/Login'
 import CalendarView from '../pages/calendar'
 
 export default function Routs () {
@@ -10,7 +10,6 @@ export default function Routs () {
         <Switch>
           <Route exact path='/login' component={LoginView} />
           <Route exact path='/' component={CalendarView} />
-
           <Redirect to='/' />
         </Switch>
       </div>

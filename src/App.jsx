@@ -1,9 +1,9 @@
 import React from 'react'
-import Routs from './router/Routs'
+import Routes from './router/Routes'
 
 function App () {
   return (
-    <Routs />
+    <Routes />
   )
 }
 

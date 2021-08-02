@@ -1,0 +1,117 @@
+.calendarContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  background-color: var(--primary);
+  height: 90%;
+  border-radius: 15px;
+}
+
+.weekDaysContainer {
+  display: grid;
+  grid-template-columns: repeat( 7, 1fr );
+}
+
+.datesContainer {
+  display: grid;
+  gap: 1px;
+  padding: 2px;
+  background-color: var(--primary);
+  border-radius: 8px;
+  height: 100%;
+  grid-template-columns: repeat( 7, 1fr );
+  grid-template-rows: auto repeat(autofit);
+}
+
+.handlers {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.handlersButtons {
+  font-size: 1.6rem;
+}
+
+.weekDaysCalendar {
+  height: auto;
+}
+
+.weekDays {
+  padding: 8px 0px;
+}
+
+.weekDays::first-letter {
+  text-transform: uppercase;
+}
+
+.calendarContainer li:nth-child(1) {
+  border-top-left-radius: 12px;
+}
+
+.calendarContainer li:nth-child(7) {
+  border-top-right-radius: 12px;
+}
+
+.calendarContainer li:nth-last-child(7) {
+  border-bottom-left-radius: 12px;
+}
+
+.calendarContainer li:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+.calendarContainer li {
+  list-style-type: none;
+  justify-self: center;
+  align-self: center;
+  font-weight: 500;
+  display: flex;
+}
+
+.cells {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+}
+
+.numberDay {
+  font-size: .85rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.today {
+  background-color: var(--primary);
+  border-radius: 50%;
+  padding: 2px;
+  line-height: .85rem;
+  height: 1.3rem;
+  width: 1.3rem;
+  display: grid;
+  place-items: center;
+}
+
+.task {
+  font-size: .8rem;
+  background-color: cadetblue;
+  border-radius: 10px;
+  padding: 3px;
+  margin: 2px 0px 2px;
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.lastBeforeDays {
+  color: var(--font-disable);
+}

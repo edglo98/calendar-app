@@ -2,7 +2,6 @@ import { rangeList } from '../utils/general'
 
 const useCalendar = ({ year, month }) => {
   const locale = 'es'
-  const todayDate = new Date()
   const intlMonth = new Intl.DateTimeFormat(locale, { month: 'long' })
   const intlWeekDay = new Intl.DateTimeFormat(locale, { weekday: 'long' })
 
@@ -20,13 +19,10 @@ const useCalendar = ({ year, month }) => {
     return intlWeekDay.format(new Date(2021, 1, dayKey))
   })
 
-  const today = [intlMonth.format(todayDate), todayDate.getDate(), todayDate.getFullYear()]
-
   return {
     monthName,
     weekDays,
     daysOfMonth,
-    today,
     lastDaysThePastMonth,
     fistDaysOnTheNextMonth
   }

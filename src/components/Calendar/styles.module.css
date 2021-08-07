@@ -3,7 +3,7 @@
   flex-direction: column;
   padding: 2px;
   background-color: var(--primary);
-  height: 90%;
+  height: 100%;
   border-radius: 15px;
 }
 
@@ -30,7 +30,8 @@
 }
 
 .handlersButtons {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
 .weekDaysCalendar {
